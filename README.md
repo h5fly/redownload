@@ -5,7 +5,7 @@
 ## windows版本
 默认下载地址为空，根据需要在config.json里设置下载地址
 
-### config.json是配置文件：
+config.json是配置文件：
 url是下载地址，
 oop_count是下载次数，
 download_speed_MB是下载速率，单位是MB/s,0为不限速。
