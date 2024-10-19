@@ -1,5 +1,5 @@
 # redownload
-### 是用newbing生成的基于python的重复下载测试工具
+#### 是用newbing生成的基于python的重复下载测试工具
 ### 默认下载地址为空，需根据需要在config.json里设置下载地址
 ### config.json是配置文件：
 ### url后是下载地址
