@@ -2,6 +2,7 @@ import requests
 import time
 import json
 
+
 def download_file(url, speed_MB):
     response = requests.get(url, stream=True)
     total_length = response.headers.get('content-length')
@@ -24,8 +25,9 @@ def download_file(url, speed_MB):
                 current_speed = downloaded / elapsed_time
                 if current_speed > speed:
                     time.sleep((downloaded / speed) - elapsed_time)
-
-    print("Download complete")
+    global fuckjdnum
+    fuckjdnum = fuckjdnum +1
+    print("\n下载完成"+str(fuckjdnum)+"次")
 
 def main():
     with open('config.json', 'r') as f:
@@ -37,7 +39,11 @@ def main():
 
     for _ in range(loop_count):
         download_file(url, download_speed_MB)
-        print("File discarded, restarting download...")
+        print("已清理，继续运行...\n")
 
 if __name__ == "__main__":
+    fuckjdnum = 0
+    print("正在运行...")
     main()
+    print("已达到设定次数")
+    input()
